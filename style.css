@@ -1,0 +1,418 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f8f8f8;
+}
+.container{
+    width: 1240px;
+    margin: auto;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+img{
+    max-width: 100%;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+a{
+    text-decoration: none ;
+}
+body, h1, h2, h3, h4, h5, h6, p, a, span{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    color: rgb(150, 150, 150);
+}
+
+/* Banner Section */
+.banner{
+    background-image:url(./img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+    position: relative;
+}
+.banner::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.header-top {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header-logo{
+    width: 30%;
+}
+.header-logo img {
+    width: 250px;
+    margin-top: 5px;
+}
+.primary-menu{
+    width: 70%;
+}
+
+.primary-menu ul {
+    list-style: none;
+}
+
+.primary-menu ul li {
+    display: inline-block;
+    margin-left: -5px;
+}
+
+.primary-menu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0 14px;
+    line-height: 69px;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    position: relative;
+}
+.primary-menu ul li:first-child a{
+    color: #c69453;
+}
+.primary-menu ul li a:hover{
+    color: #c69453;
+}
+.primary-menu a::after{
+    content: "";
+    background-color: #c69453;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: 0.4s;
+    transform: scaleX(0);
+}
+.primary-menu a:hover::after{
+    width: 100%;
+    transform: scaleX(1);
+}
+
+/* Drop Down Menu */
+.primary-menu ul li{
+    position: relative;
+}
+.primary-menu ul li ul{
+    background-color: white;
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: center center;
+     transition: 0.3s;
+}
+.primary-menu ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+.primary-menu ul li ul li{
+    display: block;
+    margin-left: 0;
+}
+.primary-menu ul li ul li a {
+    line-height: 25px !important;
+    color: black;
+    padding: 12px 0;
+    display: block;
+}
+.primary-menu ul li ul li a:hover{
+    color: #c69453 !important;
+    background: #c3c2c4;
+}
+.primary-menu ul li ul li a:hover::after {
+    content: "";
+    height: 0%;
+    width: 0%;
+}
+.primary-menu ul li ul li:first-child a{
+    color: black;
+}
+/* Drop Down Menu */
+
+
+.header-content {
+    padding-top: 220px;
+    padding-bottom: 160px;
+}
+.header-content h1 {
+    font-size: 65px;
+    color: white;
+    font-weight: 900;
+    margin: 0;
+}
+.header-content h2 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 17px;
+}
+.header-content h2::before {
+    content: "";
+    background-color: white;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    top: 16px;
+    left: 375px;
+}
+.header-content h2::after {
+    content: "";
+    background-color: white;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    top: 16px;
+    right: 375px;
+}
+.header-content button {
+    padding: 14px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: rgb(198, 148, 83);
+    margin-top: 20px;
+    transition: 0.4s;
+}
+.header-content a{
+    color: white ;
+    transition: 0.2s;
+}
+
+.header-content button:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.header-content button a:hover{
+    color: #c69453 !important;
+}
+/* Banner Section End */
+
+/* Service Section */
+.service{
+}
+.service-box {
+    padding: 100px 0;
+}
+.box-item {
+    width: 23%;
+    background-color: white;
+    margin-right: 13px;
+    margin-left: 11px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: 0.3s;
+
+}
+.box-item figure img{
+    transition: 0.8s;
+}
+.box-item:hover figure img{
+    transform: rotateY(360deg);
+}
+.box-item:hover{
+    background-color: #e9e6e5;
+}
+
+.box-item figure {
+    padding: 25px 0;
+}
+.box-item h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.box-item p {
+    margin-bottom: 35px;
+}
+.box-item button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    background: rgb(198, 148, 83);
+    transition: 0.4s;
+    margin-bottom: 30px;
+}
+.box-item a{
+    color: white;
+}
+.box-item button:hover{
+    background-color: black !important;
+    cursor: pointer;
+    transform:translateY(8px);
+}
+.box-item:hover button{
+    background-color: white;
+}
+.box-item:hover a{
+    color: rgb(198, 148, 83);
+}
+.box-item a:hover{
+    color: white !important;
+}
+/* Service Section End */
+
+/* Video Section */
+.video-section {
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+.video-side{
+    width: 50%;
+}
+.video-side video {
+    margin-top: -40px;
+}
+.video-content{
+    width: 50%;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+.video-content h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.p-2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.video-content p{
+    font-size: 15px;
+}
+.video-content button {
+    margin-top: 15px;
+}
+.video-content button {
+    padding: 15px 20px;
+    border: none;
+    font-size: 15px;
+    background: black;
+    transition: 0.4s;
+    margin-bottom: 30px;
+}
+.video-content a{
+    color: white;
+}
+.video-content span{
+    color: #c69453
+}
+.video-content button:hover{
+    background-color: #c69453;
+}
+/* Video Section End */
+
+/* Qouta Section */
+.quote{
+    background-image: url(./img/form.jpg);
+    background-position: right top;
+    background-size: cover;
+    padding: 15px 0;
+
+}
+.quote-form {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 60px;
+}
+.quote-form form {
+    line-height: 40px;
+}
+input {
+    width: 95%;
+    font-size: 15px;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: 0px 0px 7px -1px #ddd;
+}
+textarea {
+    width: 90.5%;
+    padding: 10px;
+    box-shadow: 0px 0px 7px -1px #ddd;
+    border: none;
+}
+.quote-form button {
+    padding: 15px 20px;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: rgb(198, 148, 83);
+    margin-top: 20px;
+    transition: 0.4s;
+}
+.quote-form a{
+    color: white ;
+    transition: 0.2s;
+}
+.quote-form h2 {
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.quote-form p {
+    margin-bottom: 20px;
+}
+/* Qouta Section End */
+
+/* Footer Section */
+footer{
+    background-color: #6d6d6d;
+    padding: 15px 0;
+    color: white;
+}
+.footer-content{
+    width: 50%; 
+}
+.footer-content p {
+    color: lightgrey;
+}
+.footer-icon {
+    width: 40%;
+    text-align: center;
+}
+.footer-icon a {
+    color: white;
+    padding: 0 10px;
+    font-size: 22px;
+}
+/* Footer Section End */
